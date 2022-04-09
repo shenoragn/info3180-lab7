@@ -34,9 +34,9 @@ def upload():
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         messages = [{
-            "message": "File Upload Successful"
-            "filename": "your-uploaded-file.jpg"
-            "description": "Some description for your image".
+            "message": "File Upload Successful",
+            "filename": filename,
+            "description": request.form['description']
         }]
 
 # Here we define a function to collect form errors from Flask-WTF
